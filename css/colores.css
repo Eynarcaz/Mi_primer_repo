@@ -1,0 +1,23 @@
+
+body{
+
+    margin: 10%;
+    padding: 15%;
+    background: url(fondo.jpg);
+      background-size: cover;
+      background-position: right;
+    font-family: Century Gothic ;
+    min-width: 250px ;
+    margin-bottom: 0px ;
+}
+h1 { color: white;
+text-decoration: underline;
+font-size: 30pt;
+text-align: center; }
+h2 { color: yellow; }
+#primero { color: blue ; }
+#segundo {color: red}
+ .fondo { background-color: black ;
+ font-size: 24pt;
+text-align-last: center; }
+.texto { text-align: left; }
