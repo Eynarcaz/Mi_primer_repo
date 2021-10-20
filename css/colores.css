@@ -1,4 +1,10 @@
+@@font-face {
+  font-family:"oscura"
+  src: url("../fuentes/oscura.ttf")
+  format('truetype');
+  }
 
+  @import url('https://fonts.googleapis.com/css2?family=Festive&display=swap');
 body{
 
     margin: 10%;
@@ -13,11 +19,72 @@ body{
 h1 { color: white;
 text-decoration: underline;
 font-size: 30pt;
-text-align: center; }
-h2 { color: yellow; }
+text-align: center;
+font-family: 'Architects Daughter', cursive;}
+h2 { color: yellow;
+font-family:"oscura"}
 #primero { color: blue ; }
 #segundo {color: red}
  .fondo { background-color: black ;
  font-size: 24pt;
 text-align-last: center; }
-.texto { text-align: left; }
+.texto { text-align: left;
+font-family: 'Festive', cursive; }
+.imagen{ width: 45vw;
+      height: 45vh; }
+.imagen img { width: 100%;
+      height: 100%; }
+      ol li a {font-size: 30px;  }
+      ol li{display: inline-block;}
+      ol li a:link {color:red;}
+      ol li a:active{color: black;}
+      ol li a:visited{color: yellow;}
+      ol li a:hover {color: green; }
+section{
+  height: 400px;
+  width: 100%;
+  background:
+  border: 1px solid #e0e0e0;
+
+  /*Flexbox*/
+  /*Cuando utilizamos flex-box la mayoria de las propiedades se aplican al contenedor padre*/
+  display: flex; /*Para habilitar el contexto flex*/
+  flex-wrap: wrap; /*Para aclarle al contenedor que debe respetar el ancho de sus items (hijos)*/
+  flex-direction: row; /*Para definir el main axis y cross axis (la direccion de los items)*/
+  justify-content: space-around; /* Para elegir la alineacion en el main axis*/
+  align-items: center; /* Para elegir la alineacion en el cross axis*/
+
+
+}
+
+/*Los articles estan contenidos en section y los llamamos items.
+Estos items tambien pueden ser contenedores si se le agrega la
+propiedad display:flex;*/
+article{
+  width: 25%;
+  padding: 15px;
+  border-radius: 15px;
+  background: white;
+}
+
+article img{
+  width: 100%;
+}
+
+article h2{
+  margin-top: 8px;
+}
+
+.art2{
+  /*order: 1;*/ /* Para cambiar el orden de los items*/
+  /*flex-grow: 0.8;*/  /*Para elegir cuanto puede llegar a crecer, se puede aplicar a varios items a la vez*/
+  align-self: flex-start; /* Para alinear el item de manera independiente a la alineacion de su contenedor padre*/
+}
+
+@media(max-width:500px){ /*Prueben esta querie con el flex-direction: row; en el section para ver el cambio*/
+  section{
+    flex-direction: column;
+  }
+  article{
+    width: 100%;
+  }
