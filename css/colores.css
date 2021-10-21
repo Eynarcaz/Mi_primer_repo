@@ -1,4 +1,5 @@
-@@font-face {
+
+@font-face {
   font-family:"oscura"
   src: url("../fuentes/oscura.ttf")
   format('truetype');
@@ -41,10 +42,12 @@ font-family: 'Festive', cursive; }
       ol li a:visited{color: yellow;}
       ol li a:hover {color: green; }
 section{
-  height: 400px;
+  height: 500px;
   width: 100%;
   background:
   border: 1px solid #e0e0e0;
+
+
 
   /*Flexbox*/
   /*Cuando utilizamos flex-box la mayoria de las propiedades se aplican al contenedor padre*/
@@ -81,10 +84,16 @@ article h2{
   align-self: flex-start; /* Para alinear el item de manera independiente a la alineacion de su contenedor padre*/
 }
 
-@media(max-width:500px){ /*Prueben esta querie con el flex-direction: row; en el section para ver el cambio*/
+@media(max-width:575px){
+  .art2 {background-color: blue;}
+  .art1 {background-color: yellow;}
+  .art3 {background-color: red;}
+  .art2 {display: none;}
+  h2{color: white;}
+  }{ /*Prueben esta querie con el flex-direction: row; en el section para ver el cambio*/
   section{
     flex-direction: column;
   }
   article{
-    width: 100%;
+    width: 50%;
   }
